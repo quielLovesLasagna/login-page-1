@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="A simple login page" />
+		<!-- SCSS -->
+		<link rel="stylesheet" href="./scss/main.scss" />
+		<title>Login Page - UI</title>
+	</head>
+	<body>
+		<main>
+			<div class="login">
+				<div class="login__left">
+					<div class="login__left-top">
+						<p class="login__left-top-text">A WISE QUOTE</p>
+						<div class="line"></div>
+					</div>
+					<div class="login__left-bottom">
+						<h1 class="login__left-heading-primary">
+							Get Everything You Want
+							<span
+								>You can get everything you want if you work hard, trust the
+								process, and stick to the plan.</span
+							>
+						</h1>
+					</div>
+				</div>
+				<div class="login__right">
+					<div class="login__right-logo">
+						<img
+							src="../images/logo.png"
+							alt="A picture of a circle with horizontal wavy lines inside of it"
+							class="login__right-logo-img"
+						/>
+						<p class="login__right-logo-text">Cogie</p>
+					</div>
+					<h2 class="login__right-heading-secondary">Welcome Back</h2>
+					<p class="login__right-text">
+						Enter your email and password to access your account
+					</p>
+					<form action="#" class="login__right-form">
+						<div class="email">
+							<label for="email">Email</label>
+							<input
+								type="email"
+								name="email"
+								id="email"
+								placeholder="Enter your email"
+							/>
+						</div>
+						<div class="password">
+							<label for="password">Password</label>
+							<input
+								type="password"
+								name="password"
+								id="password"
+								placeholder="Enter your password"
+							/>
+							<img src="../images/eye-logo.png" alt="An image of an eye" />
+						</div>
+						<div class="login__right-form-forgot">
+							<div class="remember-me">
+								<input type="checkbox" name="remember-me" id="remember-me" />
+								<label for="remember-me">Remember me</label>
+							</div>
+							<a href="#" class="forgot">Forgot Password</a>
+						</div>
+						<button class="login__right-form-btn">Sign In</button>
+						<button class="login__right-form-btn">
+							<img src="../images/google-logo.png" alt="G logo" /> Sign In with
+							Google
+						</button>
+					</form>
+					<div class="login__right-sign-up">
+						<p>Don’t have an account?</p>
+						<a href="#">Sign Up</a>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

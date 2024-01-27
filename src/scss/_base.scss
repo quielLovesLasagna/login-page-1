@@ -1,0 +1,220 @@
+@use "./abstracts" as abs;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	font-family: abs.$ff-poppins;
+	font-size: abs.toRem(16px);
+}
+
+.login {
+	display: flex;
+	padding: abs.toRem(10px);
+	min-height: 100vh;
+
+	&__left {
+		background-image: url("../../images/background-img.jpg");
+		background-repeat: no-repeat;
+		background-size: 200% 100%;
+		color: abs.$cl-white;
+		padding: abs.toRem(40px);
+		border-radius: abs.toRem(25px);
+		width: abs.toRem(720px);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		&-top {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			gap: abs.toRem(20px);
+
+			&-text {
+				font-weight: abs.$fw-small;
+				opacity: 0.8;
+				letter-spacing: abs.toRem(2px);
+			}
+
+			.line {
+				width: abs.toRem(150px);
+				height: abs.toRem(1px);
+				background-color: rgba(abs.$cl-white, 0.8);
+			}
+		}
+
+		&-bottom {
+			width: abs.toRem(400px);
+		}
+
+		&-heading-primary {
+			font-family: abs.$ff-noto;
+			font-size: abs.toRem(72px);
+			font-weight: abs.$fw-tiny;
+			display: flex;
+			flex-direction: column;
+			gap: abs.toRem(16px);
+			line-height: abs.toRem(72px);
+			letter-spacing: abs.toRem(-2.88px);
+
+			span {
+				font-size: abs.toRem(16px);
+				font-family: abs.$ff-poppins;
+				font-weight: inherit;
+				opacity: 0.8;
+				line-height: 1.6;
+				letter-spacing: normal;
+			}
+		}
+	}
+
+	&__right {
+		padding: abs.toRem(48px) abs.toRem(145px);
+		text-align: center;
+		color: abs.$cl-black;
+
+		&-logo {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: abs.toRem(10px);
+			margin-bottom: abs.toRem(30px);
+
+			&-text {
+				font-size: abs.toRem(22px);
+				font-weight: abs.$fw-small;
+			}
+		}
+
+		&-heading-secondary {
+			font-family: abs.$ff-noto;
+			font-size: abs.toRem(48px);
+			font-weight: abs.$fw-tiny;
+			letter-spacing: abs.toRem(-3.36px);
+			margin-bottom: abs.toRem(12px);
+		}
+
+		&-text {
+			color: abs.$cl-dark-gray;
+			margin-bottom: abs.toRem(30px);
+		}
+
+		&-form {
+			text-align: left;
+
+			.email {
+				margin-bottom: abs.toRem(24px);
+			}
+
+			label {
+				display: block;
+				margin-bottom: abs.toRem(8px);
+			}
+
+			input {
+				border: none;
+				outline: none;
+				width: 100%;
+				border-radius: abs.toRem(12px);
+				padding: abs.toRem(14px) abs.toRem(16px);
+				font-family: inherit;
+				font-size: abs.toRem(14px);
+				background-color: abs.$cl-white-2;
+
+				&::placeholder {
+					color: abs.$cl-light-gray;
+				}
+			}
+
+			.password {
+				position: relative;
+				margin-bottom: abs.toRem(12px);
+
+				img {
+					cursor: pointer;
+					position: absolute;
+					top: 60%;
+					right: 3%;
+					transform: translateY(-10%);
+				}
+			}
+		}
+
+		&-form-forgot {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: abs.toRem(40px);
+			font-size: abs.toRem(14px);
+
+			label {
+				margin-bottom: 0;
+			}
+
+			.remember-me {
+				display: grid;
+				grid-template-columns: 20px 1fr;
+				column-gap: abs.toRem(6px);
+			}
+
+			a:link,
+			a:visited {
+				text-decoration: none;
+				color: inherit;
+			}
+		}
+
+		&-form-btn {
+			width: 100%;
+			cursor: pointer;
+			border: none;
+			outline: none;
+			font-family: inherit;
+			font-size: inherit;
+			padding: abs.toRem(12px) abs.toRem(16px);
+			border-radius: abs.toRem(12px);
+		}
+
+		&-form-btn:nth-child(4) {
+			color: abs.$cl-white;
+			background-color: abs.$cl-black;
+			font-weight: abs.$fw-small;
+			margin-bottom: abs.toRem(12px);
+		}
+
+		&-form-btn:nth-child(5) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: abs.toRem(10px);
+			font-family: inherit;
+			font-size: inherit;
+			font-weight: abs.$fw-small;
+			background-color: transparent;
+			border: 1px solid abs.$cl-white-3;
+			margin-bottom: abs.toRem(20px);
+		}
+
+		&-sign-up {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			a:link,
+			a:visited {
+				text-decoration: none;
+				color: inherit;
+				font-weight: abs.$fw-small;
+				display: inline-block;
+				margin-left: abs.toRem(6px);
+			}
+		}
+	}
+}
